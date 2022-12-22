@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.9;
+    background-color: #f3f3f3;
+}
+
+
+.mainpage--navbar{
+    width:100%;
+    height:5rem;
+    border: solid;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background: rgb(174,238,193);
+    background: linear-gradient(90deg, rgba(174,238,193,1) 0%, rgba(0,141,161,1) 100%);
+    border: none;
+    padding: .7rem;
+}
+
+.mainpage--navbar__header{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+    letter-spacing: 1rem;
+    font-family: inherit;
+    cursor:default;
+}
+
+
+.mainpage--navbar__logo{
+    width: 7%;
+    margin-left: 4%;
+    height: 100%;
+    border:none;
+    height: 100%;
+}
+
+.mainpage--navbar__btns{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+ul {
+    list-style-type: none;
+}
+
+
+.nav__btn{
+    width: 200%;
+    padding: 1rem;
+    margin:2%;
+    border-radius: 12px;
+    border: none;
+    background-color:whitesmoke;
+    font-weight: bold;
+    cursor:pointer;
+    transition: background-color 2s ease-out 100ms;
+    font-family: inherit;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+}
+
+
+.nav__btn:hover {
+    background-color:inherit;
+    
+}
+
