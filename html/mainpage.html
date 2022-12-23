@@ -4,52 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title >Workify</title>
-    <link rel = "stylesheet" href = "../styles/mainpage.css">
+    <title>Workify</title>
+    <link rel="stylesheet" href="../styles/mainpage.css" />
     <link rel="icon" type = "image/x-icon" href = "../images/logo.png"
   </head>
   <body>
-
     <!--NAVBAR SECTION START-->
     <nav class="mainpage--navbar">
-
-        <img
-          src="../images/navbar-logo.png"
-          alt="Company logo"
-          class="mainpage--navbar__logo"
-          id="logo"
-        />
-        <h1 class="mainpage--navbar__header">Make work easier !</h1>
-        <ul class="mainpage--navbar__btns">
-          <li class="nav__item">
-            <button class="nav__btn" >About us</a>
-          </li>
-          <li class="nav__item">
-            <button class="nav__btn" >Register</a>
-          </li>
-          <li class="nav__item">
-            <button class="nav__btn" >Login</a>
-          </li>
-        </ul>
+      <img
+        src="../images/navbar-logo.png"
+        alt="Company logo"
+        class="mainpage--navbar__logo"
+        id="logo"
+      />
+      <h1 class="mainpage--navbar__header">Make work easier !</h1>
+      <ul class="mainpage--navbar__btns">
+        <li class="nav__item">
+          <button class="nav__btn nav__aboutus">About us</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__btn nav__register">Register</button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__btn nav__login">Login</button>
+        </li>
+      </ul>
     </nav>
     <!--NAVBAR SECTION END-->
 
     <!-- MAINPAGE CONTENT SECTION START-->
     <div class="mainpage--header">
-      <div class = mainpage--header__text >
-      <h1>
-        Take a
-        <span class="highlight">look</span> for <br/>
-        <span class="highlight">your progress</span>
-      </h1>
-      <h4>A simpler managment for simpler life</h4>
-    </div>
+      <div class="mainpage--header__text">
+        <h1>
+          Take a
+          <span class="highlight">look</span> for <br />
+          <span class="highlight">your progress</span>
+        </h1>
+        <h4>A simpler managment for simpler life</h4>
+      </div>
       <img
-      src="../images/mainpage-content-managingTeam.jpg"
-      alt="managing-team-jpg"
-      class="mainpage--header__img"/>
+        src="../images/mainpage-content-managingTeam.jpg"
+        alt="managing-team-jpg"
+        class="mainpage--header__img"
+      />
     </div>
-    
+
     <!-- MAINPAGE CONTETN SECTION END-->
+
+    <!---LOGIN FORM START-->
+
+    <div class="modal-login hidden">
+      <button class="close-modal--btn">&times;</button>
+      <h2>
+        Welcome
+        <span class="highlight">back</span>
+      </h2>
+      <form class="modal-login--form">
+        <label>Enter your login</label>
+        <input class="modal-login--form__input" type="text" />
+        <label>Enter your password</label>
+        <input class="modal-login--form__input" type="password" />
+        <button class="modal-login--form__btn">Login &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!--LOGIN FORM END-->
+
+    <script src="../src/mainpageScripts/script.js" />
   </body>
 </html>
