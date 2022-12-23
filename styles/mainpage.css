@@ -15,11 +15,7 @@ body {
   color: #444;
   line-height: 1.9;
   background-color: #f3f3f3;
-  background: linear-gradient(
-    90deg,
-    rgba(174, 238, 193, 1) 0%,
-    rgba(0, 141, 161, 1) 100%
-  );
+
 }
 
 .mainpage--navbar {
@@ -99,8 +95,8 @@ MAINPAGE CONTENT AND PHOTO STYLES
   margin: 10%;
   margin-left: 20%;
   height: 100%;
-  background-color: whitesmoke;
   border-radius: 12px;
+  
 }
 
 .mainpage--header__text {
