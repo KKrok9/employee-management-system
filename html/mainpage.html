@@ -19,9 +19,7 @@
       />
       <h1 class="mainpage--navbar__header">Make work easier !</h1>
       <ul class="mainpage--navbar__btns">
-        <li class="nav__item">
-          <button class="nav__btn nav_aboutus">About us</button>
-        </li>
+  
         <li class="nav__item">
           <button class="nav__btn nav__register">Register</button>
         </li>
@@ -54,12 +52,13 @@
     <!---LOGIN FORM START-->
 
     <div class="modal-login hidden">
-      <button class="close-modal--btn">&times;</button>
+      <button class="close-loginModal--btn">&times;</button>
       <h2>
         Welcome
-        <span class="highlight">back</span>
+        <span class="highlight">back!</span>
       </h2>
       <form class="modal-login--form">
+
         <label>Enter your login</label>
         <input class="modal-login--form__input" type="text" />
         <label>Enter your password</label>
@@ -70,6 +69,23 @@
     <div class="overlay hidden"></div>
 
     <!--LOGIN FORM END-->
+    <div class="modal-register hidden">
+      <button class="close-registerModal--btn">&times;</button>
+      <h2>
+        Hello
+        <span class="highlight">there!</span>
+      </h2>
+      <form class="modal-register--form">
+        <label>Enter your company name</label>
+        <input class="modal-register--form__input" type="text" />
+        <label>Enter your login</label>
+        <input class="modal-register--form__input" type="text" />
+        <label>Enter your password</label>
+        <input class="modal-register--form__input" type="password" />
+        <button class="modal-register--form__btn">Submit &rarr;</button>
+      </form>
+    </div>
+    <!--REGISTER FORM START-->
 
     <script src="../src/mainpageScripts/script.js"></script>
   </body>
