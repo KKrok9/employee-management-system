@@ -31,9 +31,7 @@ body {
     rgba(174, 238, 193, 1) 0%,
     rgba(0, 141, 161, 1) 100%
   );
-  padding: 0.7rem;
-  border: solid;
-  border-width: 1px;
+  
 }
 
 .mainpage--navbar__header {
@@ -78,7 +76,7 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s ease-out 100ms;
   font-family: inherit;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.5rem;
   font-size: 1.5rem;
   margin-left: 7vw;
 }

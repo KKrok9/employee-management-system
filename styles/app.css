@@ -1,0 +1,127 @@
+:root {
+    --bgMain:linear-gradient(90deg,rgba(174, 238, 193, 1) 0%,rgba(0, 141, 161, 1) 100%);
+    --red : #FF0000;
+    --green : #0CDB2E;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.9;
+    background: var(--bgMain);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .container {
+    background-color:whitesmoke;
+    width : 40vw;
+    height: 90vh;
+    border-radius: 12px;
+
+  }
+
+  .company-name{
+    display: flex;
+    justify-content: center;
+    font-size: 4.5rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .money-section{
+    display: flex;
+    margin-top:5vh;
+    font-size: 2.5rem;
+    justify-content: space-between;
+    border-bottom:solid 1px;
+    margin:2%;
+    border-radius:12px;
+  }
+
+  .expenses-and-income{
+    margin-left: 8%;
+    text-align: center;    
+}
+
+.expenses-amount{
+    color:var(--red);
+}
+
+.income-amount{
+    color:var(--green);
+}
+
+.balance {
+    margin-right: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+  margin:2%;
+  margin-top:5vh;
+  height: 50vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 12px;
+}
+ul {
+  list-style-type: none;
+}
+.menu-btn{
+  width: 20vw;
+  height: 7vh;
+  font-size: 2rem;
+  margin-top :10%;
+  border-radius: 12px;
+  border: none;
+  background: var(--bgMain);
+  font-weight: bold;
+  cursor: pointer;
+  transition:0.3s ease-out 100ms;
+  font-family: inherit;
+  letter-spacing: 0.5rem;
+}
+
+.menu-btn:hover {
+  background:inherit;
+}
+
+.page-footer{
+  margin: 2%;
+  height:6vh;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-img{
+  width: 3vw;
+  height: 6vh;
+}
+
+.footer-name{
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.footer-item{
+  margin-left:5%;
+}
