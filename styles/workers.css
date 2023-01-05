@@ -1,0 +1,134 @@
+:root {
+  --bgMain: linear-gradient(
+    90deg,
+    rgba(174, 238, 193, 1) 0%,
+    rgba(0, 141, 161, 1) 100%
+  );
+  --red: #e72831;
+  --green: #28E772;
+  --yellow: #E3CB30;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background: var(--bgMain);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.container {
+  background-color: whitesmoke;
+  width: 40vw;
+  height: 90vh;
+  border-radius: 12px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  font-size: 4.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.workers-actionBtns {
+  margin: 2%;
+  height: 10vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: solid 1px;
+border-radius: 12px;
+}
+
+.worker-btn{
+  margin: 10%;
+  width: 6vw;
+  height: 5vh;
+  font-size: 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.3rem;
+  border: none;
+}
+
+.add-worker{
+  background: var(--green);
+}
+
+.edit-worker{
+  background : var(--yellow)
+}
+
+.delete-worker{
+  background: var(--red);
+}
+
+.workers-list {
+  overflow: scroll;
+  margin: 2%;
+  height: 60vh;
+}
+
+.workers-list-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px;
+  border-radius: 12px;
+}
+
+.row-item {
+  display: flex;
+  margin: 5%;
+  width: 10vw;
+  height: 7vh;
+  font-size: 2rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.workers-list__state p{
+  width: 6vw;
+  height: 6vh;
+  font-size: 2rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+
+.ready{
+  color:var(--green)
+}
+
+.assigned {
+  color:var(--red)
+}
