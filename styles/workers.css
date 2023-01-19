@@ -4,9 +4,9 @@
     rgba(174, 238, 193, 1) 0%,
     rgba(0, 141, 161, 1) 100%
   );
-  --red: #e72831;
-  --green: #28E772;
-  --yellow: #E3CB30;
+  --red: #dc4d56;
+  --green: #28e772;
+  --yellow: #e3cb30;
 }
 
 * {
@@ -46,19 +46,26 @@ body {
   justify-content: center;
   font-size: 4.5rem;
   letter-spacing: 0.5rem;
+  border-bottom: solid 5px;
+  border-radius: 12px;
 }
 
 .workers-actionBtns {
   margin: 2%;
   height: 10vh;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom: solid 1px;
-border-radius: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px;
+  border-radius: 12px;
+  letter-spacing: 0.3rem;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.worker-btn{
+.worker-btn {
   margin: 10%;
   width: 6vw;
   height: 5vh;
@@ -69,17 +76,29 @@ border-radius: 12px;
   font-family: inherit;
   letter-spacing: 0.3rem;
   border: none;
+  display: inline-block;
+  padding: 3.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease-out 100ms;
+  color: blac;
+}
+.worker-btn:hover {
+  transition: 1s;
+  color: white;
+  border: solid 1px;
 }
 
-.add-worker{
+.add-worker {
   background: var(--green);
 }
 
-.edit-worker{
-  background : var(--yellow)
+.edit-worker {
+  background: var(--yellow);
 }
 
-.delete-worker{
+.delete-worker {
   background: var(--red);
 }
 
@@ -109,26 +128,4 @@ border-radius: 12px;
   letter-spacing: 0.2rem;
   align-items: center;
   justify-content: center;
-}
-
-.workers-list__state p{
-  width: 6vw;
-  height: 6vh;
-  font-size: 2rem;
-  border-radius: 12px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: inherit;
-  letter-spacing: 0.3rem;
-  text-align: center;
-}
-
-
-.ready{
-  color:var(--green)
-}
-
-.assigned {
-  color:var(--red)
 }
