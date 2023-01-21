@@ -50,18 +50,29 @@
 
     <!---LOGIN FORM START-->
 
+    
     <div class="modal-login hidden">
+    
       <button class="close-loginModal--btn">&times;</button>
       <h2>
         Welcome
         <span class="highlight">back!</span>
       </h2>
-      <form class="modal-login--form">
+      <form class="modal-login--form"  action="login" method="POST">
+      <div class="messages">
+      <?php
+                        if(isset($messages)){
+                            foreach($messages as $message) {
+                                echo $message;
+                            }
+                        }
+                    ?>
+                </div>
         <label>Enter your e-mail</label>
-        <input class="modal-login--form__input" type="email" />
+        <input class="modal-login--form__input" name="email" type="email">
         <label>Enter your password</label>
-        <input class="modal-login--form__input" type="password" />
-        <button class="modal-login--form__btn">Login &rarr;</button>
+        <input class="modal-login--form__input"name="password" type="password">
+        <button class="modal-login--form__btn" type="submit">Login &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
