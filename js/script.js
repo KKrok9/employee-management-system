@@ -21,3 +21,4 @@ closeLoginModalBtn.addEventListener('click',()=>{closeModal(modalLogin)});
 
 registerBtn.addEventListener('click',()=>{openModal(modalRegister)});
 closeRegisterModalBtn.addEventListener('click',()=>{closeModal(modalRegister)});
+

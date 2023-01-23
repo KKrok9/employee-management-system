@@ -86,18 +86,31 @@
         Hello
         <span class="highlight">there!</span>
       </h2>
-      <form class="modal-register--form">
+      <form class="modal-register--form" action="register" method="POST">
+          <div class="messages">
+                                 <?php
+                                      if(isset($messages)){
+                                              foreach($messages as $message) {
+                                                      echo $message;
+                          }
+                        }
+                    ?>
+          </div>
+
         <label>Enter your company name</label>
-        <input class="modal-register--form__input" type="e-mail" />
+        <input class="modal-register--form__input" type="text" name="register-company_name"/>
+
         <label>Enter your e-mail</label>
-        <input class="modal-register--form__input" type="text" />
+        <input class="modal-register--form__input" type="email" name="register-email"/>
+
         <label>Enter your password</label>
-        <input class="modal-register--form__input" type="password" />
+        <input class="modal-register--form__input" type="password" name="register-password" />
+
         <button class="modal-register--form__btn">Submit &rarr;</button>
       </form>
     </div>
     <!--REGISTER FORM END-->
 
-    <script src="../src/mainpageScripts/script.js"></script>
+    <script src="../js/script.js" defer></script>
   </body>
 </html>
