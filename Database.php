@@ -1,13 +1,15 @@
 <?php
-//require_once 'config.php';
 
-class Database{
+// require_once "config.php";
+
+class Database {
     private $username;
     private $password;
     private $host;
     private $database;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->username = 'dbuser';
         $this->password = 'dbpwd';
         $this->host = 'db';
@@ -32,5 +34,4 @@ class Database{
             die("Connection failed: " . $e->getMessage());
         }
     }
-
 }

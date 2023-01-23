@@ -1,13 +1,11 @@
 <?php
 
-namespace repository;
 require_once __DIR__.'/../../Database.php';
+class Repository {
+protected $database;
 
-class Repository
+public function __construct()
 {
-    protected $database;
-    public function __construct(){
-        $this->database = new \Database();
-    }
-
+$this->database = new Database();
+}
 }
