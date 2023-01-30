@@ -10,17 +10,18 @@
   </head>
   <body>
     <div class="container">
-      <div class="section-title">
-        <h2>pojebie mnie</h2>
-      </div>
-      <div class="workers-actionBtns">
-        <button class="worker-btn add-worker">Add</button>
-        <button class="worker-btn edit-worker">Edit</button>
-        <button class="worker-btn delete-worker">Delete</button>
-      </div>
+        <h1>Workers List</h1>
+        <form class="worker-add--form">
+            <input class="worker-add--form__input newWorker-input-name" placeholder="NAME">
+            <input class="worker-add--form__input newWorker-input-surname" placeholder="SURNAME">
+            <input class="worker-add--form__input newWorker-input-role" placeholder="ROLE">
+            <input class="worker-add--form__input newWorker-input-salary" placeholder="SALARY $">
+            <button class="worker-add--form__submit">Add new worker</button>
+        </form>
       <div class="workers-list">
         <div class = "workers-list-row">
             <!---EXAMPLE WORKER 1 -->
+
             <div class = "workers-list__name row-item">Matt Smith</div>
             <div class = "workers-list__salary row-item ">1200$</div>
             <div class = "workers-list__proffesion row-item">Front-end developer</div>
@@ -32,8 +33,10 @@
             <div class = "workers-list__salary row-item ">1200$</div>
             <div class = "workers-list__proffesion row-item">Back-end developer</div>
         </div>
-        
       </div>
+        <button class="workers-backBtn" onClick="location.href='projects'" >BACK</button>
     </div>
+
   </body>
+  <script src="../js/workers.js"></script>
 </html>

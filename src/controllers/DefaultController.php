@@ -13,4 +13,7 @@ class DefaultController extends AppController {
     {
         $this->render('app');
     }
+    public function workers(){
+        $this->render('workers');
+    }
 }

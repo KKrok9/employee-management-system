@@ -9,12 +9,12 @@
     margin: 0;
     padding: 0;
   }
-  
+
   html {
     font-size: 62.5%;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
@@ -32,7 +32,7 @@
 
   .container {
     background-color:whitesmoke;
-    width : 40vw;
+    width : 60vw;
     height: 90vh;
     border-radius: 12px;
   }
@@ -56,7 +56,7 @@
 
   .expenses-and-income{
     margin-left: 8%;
-    text-align: center;    
+    text-align: center;
 }
 
 .expenses-amount{
@@ -124,3 +124,5 @@ ul {
 .footer-item{
   margin-left:5%;
 }
+
+

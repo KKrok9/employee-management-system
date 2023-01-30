@@ -3,6 +3,7 @@
 class AppController {
     private $request;
 
+
     public function __construct()
     {
         $this->request = $_SERVER['REQUEST_METHOD'];
@@ -19,9 +20,10 @@ class AppController {
     }
     protected function render(string $template = null, array $variables = [])
     {
-        $templatePath = 'html/'. $template.'.php';
+        $templatePath = 'html/'. $template.'.html';
         $output = 'File not found';
-                
+
+
         if(file_exists($templatePath)){
             extract($variables);
             
@@ -29,6 +31,8 @@ class AppController {
             include $templatePath;
             $output = ob_get_clean();
         }
+
+
         print $output;
     }
 }

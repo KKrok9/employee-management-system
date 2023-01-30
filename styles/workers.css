@@ -32,80 +32,31 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+
 }
 
 .container {
   background-color: whitesmoke;
-  width: 40vw;
+  width: 60vw;
   height: 90vh;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.section-title {
-  display: flex;
-  justify-content: center;
+h1{
+  margin-top: 3%;
   font-size: 4.5rem;
   letter-spacing: 0.5rem;
-  border-bottom: solid 5px;
-  border-radius: 12px;
-}
-
-.workers-actionBtns {
-  margin: 2%;
-  height: 10vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: solid 1px;
-  border-radius: 12px;
-  letter-spacing: 0.3rem;
-  padding: 1rem;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.worker-btn {
-  margin: 10%;
-  width: 6vw;
-  height: 5vh;
-  font-size: 2rem;
-  border-radius: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: inherit;
-  letter-spacing: 0.3rem;
-  border: none;
-  display: inline-block;
-  padding: 3.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.5s ease-out 100ms;
-  color: blac;
-}
-.worker-btn:hover {
-  transition: 1s;
-  color: white;
-  border: solid 1px;
-}
-
-.add-worker {
-  background: var(--green);
-}
-
-.edit-worker {
-  background: var(--yellow);
-}
-
-.delete-worker {
-  background: var(--red);
 }
 
 .workers-list {
+  margin-top: 3%;
   overflow: scroll;
-  margin: 2%;
   height: 60vh;
+  width: 90%;
 }
 
 .workers-list-row {
@@ -128,4 +79,76 @@ body {
   letter-spacing: 0.2rem;
   align-items: center;
   justify-content: center;
+}
+
+/*
+WORKER ADD FORM
+ */
+
+.worker-add--form
+{
+  width:90%;
+  height: 30vh;
+  border-radius: 12px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  background: var(--green);
+  flex-wrap: wrap;
+}
+.worker-add--form__input{
+  font-weight: inherit;
+  letter-spacing: 3px;
+  max-height: 3.5vh;
+  width: 30%;
+  margin:2%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border:none;
+  border-radius: 12px;
+  text-align: center;
+}
+.worker-add--form__submit{
+  font-weight: inherit;
+  letter-spacing: 2px;
+  max-height: 4.5vh;
+  width: 30%;
+  margin:2%;
+  display: flex;
+  flex-wrap: wrap;
+  border:none;
+  text-align: center;
+  background: rgba(174, 238, 193, 1);
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-out 100ms;
+  border-radius: 12px;
+}
+
+.worker-add--form__submit:hover {
+  background:inherit;
+  color:whitesmoke;
+}
+
+.empty-input{
+  border:solid 2px #ef5560;
+}
+
+.workers-backBtn{
+  color:black;
+  margin-bottom: 2%;
+  width: 10vw;
+  height: 5vh;
+  background: rgba(174, 238, 193, 1);
+  border-radius: 12px;
+  transition: background-color 0.3s ease-out 100ms;
+  border: solid 1px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+
+.workers-backBtn:hover{
+  background: var(--green);
 }

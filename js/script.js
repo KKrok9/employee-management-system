@@ -6,6 +6,8 @@ let overlay = document.querySelector('.overlay');
 let closeLoginModalBtn = document.querySelector('.close-loginModal--btn');
 let closeRegisterModalBtn = document.querySelector('.close-registerModal--btn');
 
+
+
 const openModal = (modal) =>{
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
@@ -21,4 +23,3 @@ closeLoginModalBtn.addEventListener('click',()=>{closeModal(modalLogin)});
 
 registerBtn.addEventListener('click',()=>{openModal(modalRegister)});
 closeRegisterModalBtn.addEventListener('click',()=>{closeModal(modalRegister)});
-

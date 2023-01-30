@@ -15,7 +15,7 @@ class UserRepository extends Repository
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user == false) {
+        if (!$user) {
             return null;
         }
 
@@ -25,6 +25,8 @@ class UserRepository extends Repository
             $user['company_name'],
         );
     }
+
+
     public function addUser(User $user)
     {
         $stmt = $this->database->connect()->prepare('
@@ -39,5 +41,7 @@ class UserRepository extends Repository
         ]);
 
     }
+
+
 
 }

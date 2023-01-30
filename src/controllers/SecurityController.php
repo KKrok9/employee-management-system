@@ -3,18 +3,20 @@
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
-
+require_once __DIR__.'/../../Database.php';
 class SecurityController extends AppController {
     private $userRepository;
-
+    protected $database;
     public function __construct()
     {
                 parent::__construct();
                 $this->userRepository = new UserRepository();
+
     }
 
     public function login()
     {
+
 
         if (!$this->isPost()) {
             return $this->render('mainpage');
@@ -38,6 +40,8 @@ class SecurityController extends AppController {
         }
 
         $url = "http://$_SERVER[HTTP_HOST]";
+        
+
         header("Location: {$url}/projects");
     }
 
@@ -51,7 +55,6 @@ class SecurityController extends AppController {
         $password = $_POST['register-password'];
         $company_name = $_POST['register-company_name'];
 
-        //TODO try to use better hash function
         $user = new User($email, md5($password),$company_name);
         $this->userRepository->addUser($user);
 
