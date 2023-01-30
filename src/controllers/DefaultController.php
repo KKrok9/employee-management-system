@@ -8,7 +8,9 @@ class DefaultController extends AppController {
     {
         $this->render('mainpage');
     }
-
+    public function transactionHistory(){
+        $this->render('transactionHistory');
+    }
     public function projects()
     {
         $this->render('app');

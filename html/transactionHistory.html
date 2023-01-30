@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/transactionHistory.css" />
+    <link rel="icon" type="image/x-icon" href="../images/logo.png" />
+    <title>Workify</title>
 </head>
-<body>
+<div class="container">
+    <h1>Your transaction history</h1>
+    <div class="movements-container">
+        <div class ="movements__row">
+            <div class="movement-item movement__type movement__type--income">2 income</div>
+            <div class="movement-item movement__value">-1200$</div>
+            <div class="movement-item movement-description" >Tommy's Morgan paycheck</div>
+        </div>
 
+        <div class ="movements__row">
+            <div  class="movement-item movement__type movement__type--outcome">1 outcome</div>
+            <div   class="movement-item movement__value">+1200$</div>
+            <div  class="movement-item movement-description">Liberty City statue renovation</div>
+        </div>
+    </div>
+    <button class="transactionHistory-backBtn" onClick="location.href='projects'" >BACK</button>
+</div>
 </body>
+<script src="../js/workers.js"></script>
 </html>

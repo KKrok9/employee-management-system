@@ -1,13 +1,9 @@
 :root {
-    --bgMain: linear-gradient(
-            90deg,
-            rgba(174, 238, 193, 1) 0%,
-            rgba(0, 141, 161, 1) 100%
-    );
-    --red: #dc4d56;
-    --green: #28e772;
-    --yellow: #e3cb30;
+    --bgMain:linear-gradient(90deg,rgba(174, 238, 193, 1) 0%,rgba(0, 141, 161, 1) 100%);
+    --red : #E72831;
+    --green : #28E772;
 }
+
 
 * {
     margin: 0;
@@ -32,10 +28,8 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-
 }
-
-.container {
+.container{
     background-color: whitesmoke;
     width: 60vw;
     height: 90vh;
@@ -52,14 +46,14 @@ h1{
     letter-spacing: 0.5rem;
 }
 
-.workers-list {
+.movements-container{
     margin-top: 3%;
     overflow: scroll;
     height: 60vh;
     width: 90%;
 }
 
-.workers-list-row {
+.movements__row{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +61,8 @@ h1{
     border-radius: 12px;
 }
 
-.row-item {
+
+.movement-item {
     display: flex;
     margin: 5%;
     width: 10vw;
@@ -79,63 +74,18 @@ h1{
     letter-spacing: 0.2rem;
     align-items: center;
     justify-content: center;
+
 }
 
-/*
-WORKER ADD FORM
- */
-
-.worker-add--form
-{
-    width:90%;
-    height: 30vh;
-    border-radius: 12px;
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    background: var(--green);
-    flex-wrap: wrap;
+.movement__type--income{
+    color:var(--green);
 }
-.worker-add--form__input{
-    font-weight: inherit;
-    letter-spacing: 3px;
-    max-height: 3.5vh;
-    width: 30%;
-    margin:2%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border:none;
-    border-radius: 12px;
-    text-align: center;
-}
-.worker-add--form__submit{
-    font-weight: inherit;
-    letter-spacing: 2px;
-    max-height: 4.5vh;
-    width: 30%;
-    margin:2%;
-    display: flex;
-    flex-wrap: wrap;
-    border:none;
-    text-align: center;
-    background: rgba(174, 238, 193, 1);
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease-out 100ms;
-    border-radius: 12px;
+.movement__type--outcome{
+    color:var(--red);
+    text-decoration: #dc4d56;
 }
 
-.worker-add--form__submit:hover {
-    background:inherit;
-    color:whitesmoke;
-}
-
-.empty-input{
-    border:solid 2px #ef5560;
-}
-
-.workers-backBtn{
+.transactionHistory-backBtn{
     color:black;
     margin-bottom: 2%;
     width: 10vw;
@@ -149,6 +99,6 @@ WORKER ADD FORM
 }
 
 
-.workers-backBtn:hover{
+.transactionHistory-backBtn:hover{
     background: var(--green);
 }
