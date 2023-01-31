@@ -10,6 +10,8 @@ Router::get('index', 'DefaultController');
 Router::get('projects', 'DefaultController');
 Router::get('workers','DefaultController');
 Router::get('transactionHistory','DefaultController');
+Router::get('availableOrders','DefaultController');
+Router::get('activeOrders','DefaultController');
 Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
 Router::run($path);

@@ -1,0 +1,170 @@
+:root {
+    --bgMain: linear-gradient(
+            90deg,
+            rgba(174, 238, 193, 1) 0%,
+            rgba(0, 141, 161, 1) 100%
+    );
+    --red: #dc4d56;
+    --green: #28e772;
+    --yellow: #e3cb30;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: #444;
+    line-height: 1.9;
+    background: var(--bgMain);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 4.5rem;
+    letter-spacing: 0.5rem;
+}
+
+.addOrder-form__container{
+    border-radius: 12px;
+    width: 60vw;
+
+}
+
+.order-add--form{
+    width:100%;
+    height: 30vh;
+    border-radius: 12px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    background: whitesmoke;
+    flex-wrap: wrap;
+}
+
+.order-add--form__input{
+
+    font-weight: inherit;
+    letter-spacing: 3px;
+    max-height: 3.5vh;
+    width: 20%;
+    margin:5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border:none;
+    text-align: center;
+}
+
+.order-add--form__submit{
+    font-weight: inherit;
+    letter-spacing: 5px;
+    max-height: 4.5vh;
+    width: 30%;
+    margin-bottom:3%;
+    display: flex;
+    flex-wrap: wrap;
+    border:none;
+    text-align: center;
+    background: rgba(174, 238, 193, 1);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-out 100ms;
+    border-radius: 12px;
+}
+.order-add--form__submit:hover {
+    transition: background-color 0.3s ease-out 100ms;
+    background: var(--green);
+    color:whitesmoke;
+}
+
+.availableOrders-list__container{
+    border-radius: 12px;
+    width: 60vw;
+    background-color:var(--bgMain);
+    margin-top: 1%;
+    height: 60vh;
+}
+
+.availableOrders-list{
+
+    background-color:whitesmoke;
+    overflow: scroll;
+    height: 50vh;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.availableOrder-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px;
+    border-radius: 12px;
+
+}
+
+.availableOrder-row__item{
+    display: flex;
+    margin: 5%;
+    width: 10vw;
+    height: 7vh;
+    font-size: 2rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.start-order__btn{
+    border: none;
+    color:black;
+    width: 10vw;
+    height: 5vh;
+    background: rgba(174, 238, 193, 1);
+    border-radius: 12px;
+    transition: background-color 0.3s ease-out 100ms;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.start-order__btn:hover{
+    color:whitesmoke;
+    background: var(--green);
+}
+
+.availableOrders-backBtn{
+    border: none;
+    color:black;
+    width: 10vw;
+    height: 5vh;
+    background: rgba(174, 238, 193, 1);
+    border-radius: 12px;
+    transition: background-color 0.3s ease-out 100ms;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 1%;
+}
+
+.availableOrders-backBtn:hover{
+    color:whitesmoke;
+    background: var(--green);
+}
+.empty-input{
+    border:solid 2px #ef5560;
+}

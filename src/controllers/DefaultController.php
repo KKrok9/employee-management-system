@@ -18,4 +18,12 @@ class DefaultController extends AppController {
     public function workers(){
         $this->render('workers');
     }
+
+    public function availableOrders(){
+        $this->render('availableOrders');
+    }
+
+    public function activeOrders(){
+        $this->render('activeOrders');
+    }
 }
