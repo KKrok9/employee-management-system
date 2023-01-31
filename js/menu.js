@@ -6,7 +6,6 @@ let transactionsArray = JSON.parse(localStorage.getItem('transactions'));
 if(transactionsArray==null){
     transactionsArray=[];
 }
-
 localStorage.clear();
 const calculateMoney = () =>{
     let totalExpenses = 0;

@@ -83,9 +83,16 @@ p{
     letter-spacing: 0.2rem;
     align-items: center;
     justify-content: center;
+
 }
 
 .finish-order__btn{
+    color:black;
+    background: rgba(174, 238, 193, 1);
+    transition: background-color 0.3s ease-out 100ms;
+}
+
+.finish-order__btn:hover{
     color:whitesmoke;
     background: var(--green);
 }
@@ -95,7 +102,6 @@ p{
     color:black;
     width: 10vw;
     height: 5vh;
-    background: rgba(174, 238, 193, 1);
     border-radius: 12px;
     transition: background-color 0.3s ease-out 100ms;
     font-weight: bold;
