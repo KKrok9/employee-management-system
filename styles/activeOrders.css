@@ -1,0 +1,109 @@
+:root {
+    --bgMain: linear-gradient(
+            90deg,
+            rgba(174, 238, 193, 1) 0%,
+            rgba(0, 141, 161, 1) 100%
+    );
+    --red: #dc4d56;
+    --green: #28e772;
+    --yellow: #e3cb30;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: #444;
+    line-height: 1.9;
+    background: var(--bgMain);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 4.5rem;
+    letter-spacing: 0.5rem;
+}
+
+p{
+    font-size:2.5rem;
+    letter-spacing: 0.5rem;
+}
+.activeOrders-statistics{
+    width: 60%;
+    margin:2%;
+    border-bottom: solid 1px;
+    border-radius: 12px;
+}
+.activeOrders-list__container{
+    background-color:whitesmoke;
+    border-radius: 12px;
+    width: 60vw;
+    margin-top: 1%;
+    height: 90vh;
+}
+
+.activeOrders-list{
+
+    overflow: scroll;
+    height: 80%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.activeOrder-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px;
+    border-radius: 12px;
+}
+
+.activeOrder-row__item{
+    display: flex;
+    margin: 5%;
+    width: 10vw;
+    height: 7vh;
+    font-size: 2rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.finish-order__btn{
+    color:whitesmoke;
+    background: var(--green);
+}
+
+.activeOrders-backBtn{
+    border: none;
+    color:black;
+    width: 10vw;
+    height: 5vh;
+    background: rgba(174, 238, 193, 1);
+    border-radius: 12px;
+    transition: background-color 0.3s ease-out 100ms;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 1%;
+}
+
+.activeOrders-backBtn:hover{
+    color:whitesmoke;
+    background: var(--green);
+}

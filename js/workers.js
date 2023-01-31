@@ -23,7 +23,6 @@ if(transactionHistoryArray==null){
     transactionHistoryArray=[];
 }
 ///////////////////////////////////////////////////////////////////////
-
 const createFullName = function(name,surname){
     return (name+' '+surname);
 }

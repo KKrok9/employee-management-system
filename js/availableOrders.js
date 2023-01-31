@@ -16,7 +16,7 @@ let availableOrdersArray = JSON.parse(localStorage.getItem('available-orders'));
 if(activeOrdersArray==null){
     activeOrdersArray=[];
 }
-
+console.log(localStorage);
 if(availableOrdersArray==null){
     availableOrdersArray=[];
 }
@@ -46,6 +46,10 @@ const addAvailableOrderToLocalStorage = () =>{
     localStorage.setItem('available-orders', JSON.stringify(availableOrdersArray))
 }
 
+const addActiveOrderToLocalStorage = () =>{
+    localStorage.setItem('active-orders', JSON.stringify(activeOrdersArray));
+}
+
 const addOrderToList = (orderDescription, orderLocation, orderValue, bossID) =>{
     let order = {
         description : orderDescription,
@@ -67,18 +71,22 @@ const displayActiveOrders = () =>{
             <div class="availableOrder-row__item availableOrder-row__itemLocation">${availableOrdersArray[i].location}</div>
             <div class="availableOrder-row__item availableOrder-row__itemValue" >${availableOrdersArray[i].value}$</div>
             <button class="availableOrder-row__item start-order__btn type--${i}">Start order</button>
+            </div>
         `
         allAvailableOrdersHTML.insertAdjacentHTML('afterbegin',htmlRow);
         let className = ("type--"+i)
         let startOrderBtn = document.querySelector(`.${className}`);
         startOrderBtn.addEventListener('click', function (e){
             e.preventDefault();
+            activeOrdersArray.push(availableOrdersArray[i]);
             availableOrdersArray.splice(i,1);
+
+            addActiveOrderToLocalStorage();
             addAvailableOrderToLocalStorage();
+
             displayActiveOrders();
         })
-        console.log(startOrderBtn)
-
+        console.log(localStorage);
     }
 }
 displayActiveOrders();
