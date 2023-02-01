@@ -104,25 +104,6 @@ ul {
   border: solid;
 }
 
-.page-footer{
-  margin: 2%;
-  height:6vh;
-  display: flex;
-  justify-content: center;
-}
 
-.footer-img{
-  width: 3vw;
-  height: 6vh;
-}
-
-.footer-name{
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.footer-item{
-  margin-left:5%;
-}
 
 

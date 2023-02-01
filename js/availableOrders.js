@@ -13,6 +13,8 @@ let submitNewAvailableOrder = document.querySelector('.order-add--form__submit')
 //LOCAL STORAGE LISTS
 let activeOrdersArray = JSON.parse(localStorage.getItem('active-orders'));
 let availableOrdersArray = JSON.parse(localStorage.getItem('available-orders'));
+let currentUserID = JSON.parse(localStorage.getItem('currentUserID'));
+console.log(availableOrdersArray);
 if(activeOrdersArray==null){
     activeOrdersArray=[];
 }
@@ -63,8 +65,8 @@ const addOrderToList = (orderDescription, orderLocation, orderValue, bossID) =>{
 
 const displayActiveOrders = () =>{
     allAvailableOrdersHTML.innerHTML = '';
-
     for(let i = 0; i<availableOrdersArray.length;i++){
+        if(availableOrdersArray[i].owner){
         let htmlRow = `
         <div class ="availableOrder-row">
             <div class="availableOrder-row__item availableOrder-row__itemDescription ">${availableOrdersArray[i].description}</div>
@@ -86,7 +88,7 @@ const displayActiveOrders = () =>{
 
             displayActiveOrders();
         })
-        console.log(localStorage);
+        }
     }
 }
 displayActiveOrders();
@@ -94,7 +96,7 @@ const addNewOrder = () =>{
     // POBIERAMY WARTOŚĆI Z INPUTÓW I DODAJEMY DO TABLICY NOWY OBIEKT
     //UPDATUJEMY LOCAL STORAGE, TYM CO MAMY TABLICY
     if(checkIfNull()==0){
-        addOrderToList(newOrderDescription.value,newOrderLocation.value,newOrderValue.value,1);
+        addOrderToList(newOrderDescription.value,newOrderLocation.value,newOrderValue.value,currentUserID);
         displayActiveOrders();
         clearNewOrderInputs();
     }

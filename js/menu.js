@@ -1,23 +1,40 @@
 let expensesAmount = document.querySelector('.expenses-amount');
 let incomeAmount = document.querySelector('.income-amount');
 let balance = document.querySelector('.balance');
-
+let menuGreeting = document.querySelector('.menu-greeting');
+let currentUserID = JSON.parse(localStorage.getItem('currentUserID'))
 let transactionsArray = JSON.parse(localStorage.getItem('transactions'));
+
 if(transactionsArray==null){
     transactionsArray=[];
 }
-localStorage.clear();
+
+
+const capitalizeFirstLetter = (string) =>{
+    return string.charAt(0).toUpperCase()+string.slice(1);
+}
+const createGreeting = (email) =>{
+    let helper = email.toString();
+    let greeting = helper.substring(0, helper.indexOf('@'))
+    return capitalizeFirstLetter(greeting);
+}
+
+menuGreeting.textContent=`Hello ${createGreeting(currentUserID)}!`
+
+
 const calculateMoney = () =>{
     let totalExpenses = 0;
     let totalIncome = 0;
     let values = [];
 
-    for(let i =0 ; i<transactionsArray.length; i++){
-        if(transactionsArray[i].amount<0){
-            totalExpenses = totalExpenses + Number(transactionsArray[i].amount);
-        }
-        if(transactionsArray[i].amount>0){
-           totalIncome = totalIncome+Number(transactionsArray[i].amount);
+    for(let i =0 ; i<transactionsArray.length; i++) {
+        if (transactionsArray[i].owner == currentUserID) {
+            if (transactionsArray[i].amount < 0) {
+                totalExpenses = totalExpenses + Number(transactionsArray[i].amount);
+            }
+            if (transactionsArray[i].amount > 0) {
+                totalIncome = totalIncome + Number(transactionsArray[i].amount);
+            }
         }
     }
     let totalBalance = totalExpenses+totalIncome;
@@ -31,6 +48,5 @@ const updateUI = () =>{
     incomeAmount.textContent = `Income : ${calculateMoney()[1]}$`;
     balance.textContent=`Balance : ${calculateMoney()[2]}$`;
 }
-
-console.log(calculateMoney());
 updateUI();
+

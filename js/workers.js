@@ -17,11 +17,16 @@ if(allWorkersArray==null){
     allWorkersArray=[];
 }
 
+let currentUserID = JSON.parse(localStorage.getItem('currentUserID'))
+console.log(currentUserID)
+
 //EXPENSES ARRAY
 let transactionHistoryArray = JSON.parse(localStorage.getItem('transactions'));
 if(transactionHistoryArray==null){
     transactionHistoryArray=[];
 }
+
+console.log(localStorage);
 ///////////////////////////////////////////////////////////////////////
 const createFullName = function(name,surname){
     return (name+' '+surname);
@@ -37,7 +42,7 @@ const clearInputs = function(){
 const addNewWorker = function(){
 
     if(checkIfNull()==0) {
-        addWorkerToList(newWorkerName.value,newWorkerSurname.value, newWorkerSalary.value, newWorkerRole.value, 3,1);
+        addWorkerToList(newWorkerName.value,newWorkerSurname.value, newWorkerSalary.value, newWorkerRole.value, 3,currentUserID);
         displayWorkers();
         clearInputs();
     }
@@ -64,15 +69,17 @@ const displayWorkers = () =>{
         addNewWorker();
         return;
     }
-    for(i=0; i<allWorkersArray.length; i++){
-        let htmlRow = `
+    for(i=0; i<allWorkersArray.length; i++) {
+        if (allWorkersArray[i].boss == currentUserID) {
+            let htmlRow = `
         <div class = "workers-list-row">
             <div class = "workers-list__name row-item">${createFullName(allWorkersArray[i].name, allWorkersArray[i].surname)}</div>
             <div class = "workers-list__salary row-item ">${allWorkersArray[i].salary}$</div>
             <div class = "workers-list__role row-item">${allWorkersArray[i].role}</div>
         </div>
         `
-        workersList.insertAdjacentHTML('afterbegin',htmlRow);
+            workersList.insertAdjacentHTML('afterbegin', htmlRow);
+        }
     }
 }
 displayWorkers();

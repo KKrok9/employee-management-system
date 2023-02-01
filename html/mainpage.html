@@ -60,6 +60,7 @@
       </h2>
       <form class="modal-login--form"  action="login" method="POST">
       <div class="messages">
+        <p class="message-content">
       <?php
                         if(isset($messages)){
                             foreach($messages as $message) {
@@ -67,7 +68,8 @@
                             }
                         }
                     ?>
-                </div>
+        </p>
+      </div>
         <label>Enter your e-mail</label>
         <input class="modal-login--form__input" name="email" type="email">
         <label>Enter your password</label>
