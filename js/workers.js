@@ -30,6 +30,12 @@ if(transactionHistoryArray==null){
 const createFullName = function(name,surname){
     return (name+' '+surname);
 }
+const formatMoney = (amount) =>{
+    return ((amount).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }))
+}
 
 const clearInputs = function(){
     newWorkerName.value = '';
@@ -54,6 +60,8 @@ const addNewWorker = function(){
     }
 
 }
+
+
 const checkIfNull = function(){
     let flag = 0 ; // not null
     for(let i = 0; i<allNewWorkersInput.length; i++){
@@ -80,7 +88,7 @@ const displayWorkers = () =>{
             let htmlRow = `
         <div class = "workers-list-row">
             <div class = "workers-list__name row-item">${createFullName(allWorkersArray[i].name, allWorkersArray[i].surname)}</div>
-            <div class = "workers-list__salary row-item ">${allWorkersArray[i].salary}$</div>
+            <div class = "workers-list__salary row-item ">${formatMoney(Number(allWorkersArray[i].salary))}</div>
             <div class = "workers-list__role row-item">${allWorkersArray[i].role}</div>
         </div>
         `

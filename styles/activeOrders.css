@@ -130,6 +130,7 @@ p{
     }
     .activeOrders-statistics__item{
         letter-spacing: 0px;
+        font-size: 2rem;
     }
     .activeOrder-row__item{
         font-size: 1.1rem;

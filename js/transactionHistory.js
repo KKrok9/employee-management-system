@@ -16,6 +16,13 @@ const checkTypeOfTransaction = (amount) =>{
     }
 }
 
+const formatMoney = (amount) =>{
+    return ((amount).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }))
+}
+
 
 const displayTransactions = () => {
     transactionsContainer.innerHTML='';
@@ -27,7 +34,7 @@ const displayTransactions = () => {
             let html = `
         <div class ="movements__row">
             <div class="movement-item movement__type movement__type--${checkTypeOfTransaction(transactionsArray[i].amount)}">${i + 1} ${checkTypeOfTransaction(transactionsArray[i].amount)}</div>
-            <div class="movement-item movement__value">${transactionsArray[i].amount}$</div>
+            <div class="movement-item movement__value">${formatMoney(Number(transactionsArray[i].amount))}$</div>
             <div class="movement-item movement-description" >${transactionsArray[i].description}</div>
         </div>
       `

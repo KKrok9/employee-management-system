@@ -13,11 +13,19 @@ if(activeOrdersArray==null){
 if(transactionsArray==null){
     transactionsArray=[];
 }
-console.log(localStorage);
+const formatMoney = (amount) =>{
+    return ((amount).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }))
+}
+
 const setStatistics = (counter, estimatedIncome) =>{
     activeOrdersCounter.textContent = `Active orders : ${counter}`;
-    activeOrdersEstimatedIncome.textContent = `Estimated income : ${estimatedIncome}$`
+    activeOrdersEstimatedIncome.textContent = `Estimated income : ${formatMoney(Number(estimatedIncome))}$`
 }
+
+
 
 const calculateEstimatedIncome = () => {
     let sum = 0;
@@ -40,9 +48,6 @@ const calculateLength = () =>{
 
 setStatistics(calculateLength(), calculateEstimatedIncome());
 
-console.log(activeOrdersArray);
-console.log('----------------');
-console.log(transactionsArray);
 //////////////////////////////////////DISPLAYING ACTIVE ORDERS
 const refreshActiveOrders = () =>{
     localStorage.setItem('active-orders', JSON.stringify(activeOrdersArray));
@@ -61,7 +66,7 @@ const displayActiveOrders = () => {
         <div class ="activeOrder-row">
             <div class="activeOrder-row__item activeOrder-row__itemDescription ">${activeOrdersArray[i].description}</div>
             <div class="activeOrder-row__item activeOrder-row__itemLocation">${activeOrdersArray[i].location}</div>
-            <div class="activeOrder-row__item activeOrder-row__itemValue" >${activeOrdersArray[i].value}$</div>
+            <div class="activeOrder-row__item activeOrder-row__itemValue" >${formatMoney(Number(activeOrdersArray[i].value))}$</div>
             <button class="activeOrder-row__item finish-order__btn type--${i}">Finish order</button>
         </div>
         `

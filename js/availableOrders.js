@@ -23,6 +23,13 @@ if(availableOrdersArray==null){
     availableOrdersArray=[];
 }
 
+const formatMoney = (amount) =>{
+    return ((amount).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }))
+}
+
 const clearNewOrderInputs = () =>{
     for(let i = 0; i<allNewOrderInputs.length; i++){
         allNewOrderInputs[i].value = '';
@@ -71,7 +78,7 @@ const displayActiveOrders = () =>{
         <div class ="availableOrder-row">
             <div class="availableOrder-row__item availableOrder-row__itemDescription ">${availableOrdersArray[i].description}</div>
             <div class="availableOrder-row__item availableOrder-row__itemLocation">${availableOrdersArray[i].location}</div>
-            <div class="availableOrder-row__item availableOrder-row__itemValue" >${availableOrdersArray[i].value}$</div>
+            <div class="availableOrder-row__item availableOrder-row__itemValue" >${formatMoney(Number(availableOrdersArray[i].value))}$</div>
             <button class="availableOrder-row__item start-order__btn type--${i}">Start order</button>
             </div>
         `

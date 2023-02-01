@@ -13,6 +13,13 @@ if(transactionsArray==null){
 const capitalizeFirstLetter = (string) =>{
     return string.charAt(0).toUpperCase()+string.slice(1);
 }
+
+const formatMoney = (amount) =>{
+    return ((amount).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }))
+}
 const createGreeting = (email) =>{
     let helper = email.toString();
     let greeting = helper.substring(0, helper.indexOf('@'))
@@ -20,7 +27,6 @@ const createGreeting = (email) =>{
 }
 
 menuGreeting.textContent=`Hello ${createGreeting(currentUserID)}!`
-
 
 const calculateMoney = () =>{
     let totalExpenses = 0;
@@ -44,9 +50,9 @@ const calculateMoney = () =>{
 }
 
 const updateUI = () =>{
-    expensesAmount.textContent = `Expenses : ${Math.abs(calculateMoney()[0])}$`;
-    incomeAmount.textContent = `Income : ${calculateMoney()[1]}$`;
-    balance.textContent=`Balance : ${calculateMoney()[2]}$`;
+    expensesAmount.textContent = `Expenses : ${formatMoney(Math.abs(calculateMoney()[0]))}`;
+    incomeAmount.textContent = `Income : ${formatMoney(calculateMoney()[1])}`;
+    balance.textContent=`Balance : ${formatMoney(calculateMoney()[2])}`;
 }
 updateUI();
 
