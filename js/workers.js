@@ -26,7 +26,6 @@ if(transactionHistoryArray==null){
     transactionHistoryArray=[];
 }
 
-console.log(localStorage);
 ///////////////////////////////////////////////////////////////////////
 const createFullName = function(name,surname){
     return (name+' '+surname);
@@ -42,9 +41,16 @@ const clearInputs = function(){
 const addNewWorker = function(){
 
     if(checkIfNull()==0) {
-        addWorkerToList(newWorkerName.value,newWorkerSurname.value, newWorkerSalary.value, newWorkerRole.value, 3,currentUserID);
-        displayWorkers();
-        clearInputs();
+        if(isNaN(Number(newWorkerSalary.value))==false) {
+            addWorkerToList(newWorkerName.value, newWorkerSurname.value, newWorkerSalary.value, newWorkerRole.value, 3, currentUserID);
+            displayWorkers();
+            clearInputs();
+        }
+        else{
+            newWorkerSalary.classList.add('empty-input');
+            console.log(Number(newWorkerSalary.value));
+            console.log('nan')
+        }
     }
 
 }

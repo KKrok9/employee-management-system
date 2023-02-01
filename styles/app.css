@@ -104,6 +104,28 @@ ul {
   border: solid;
 }
 
+@media screen and (max-height: 900px ) and (max-width: 500px){
+  .container{
+    width: 95%;
+    height: 80vh;
+  }
+  h2{
+    font-size: 3rem;
+  }
+
+  .money-section{
+    display: flex;
+    flex-direction: column;
+  }
+  .expenses-and-income{
+    margin-left: 0%;
+    text-align: left;
+  }
+  .menu-btn{
+    width: 60vw;
+  }
+}
+
 
 
 

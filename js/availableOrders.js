@@ -96,9 +96,14 @@ const addNewOrder = () =>{
     // POBIERAMY WARTOŚĆI Z INPUTÓW I DODAJEMY DO TABLICY NOWY OBIEKT
     //UPDATUJEMY LOCAL STORAGE, TYM CO MAMY TABLICY
     if(checkIfNull()==0){
+        if(isNaN(Number(newOrderValue.value))==false){
         addOrderToList(newOrderDescription.value,newOrderLocation.value,newOrderValue.value,currentUserID);
         displayActiveOrders();
         clearNewOrderInputs();
+    }
+        else{
+            newOrderValue.classList.add('empty-input');
+        }
     }
     else{
         return;

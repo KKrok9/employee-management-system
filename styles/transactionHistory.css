@@ -102,3 +102,23 @@ h1{
 .transactionHistory-backBtn:hover{
     background: var(--green);
 }
+
+@media screen and (max-height: 900px ) and (max-width: 500px) {
+    .container {
+        width: 95%;
+        height: 80vh;
+    }
+    .movement-item{
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+        width: 20vw;
+    }
+    h1{
+        font-size: 3rem;
+        letter-spacing: 0px;
+    }
+    .transactionHistory-backBtn{
+        width: 40%;
+        margin-bottom: 5%;
+    }
+}
