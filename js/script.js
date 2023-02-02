@@ -9,10 +9,12 @@ let closeRegisterModalBtn = document.querySelector('.close-registerModal--btn');
 //SETTING USER ID IN LOCALSTORAGE
 let userID = document.querySelector('.modal-login--form__input');
 let loginFormBtn = document.querySelector('.modal-login--form__btn');
+
 loginFormBtn.addEventListener('click',function (){
     localStorage.setItem('currentUserID',JSON.stringify(userID.value));
 })
 
+console.log(localStorage);
 const openModal = (modal) =>{
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');

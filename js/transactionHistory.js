@@ -29,11 +29,13 @@ const displayTransactions = () => {
     if(transactionsArray==null){
         return;
     }
+    let j =0;
     for (let i = 0; i < transactionsArray.length; i++) {
         if (transactionsArray[i].owner == currentUserID) {
+            j++;
             let html = `
         <div class ="movements__row">
-            <div class="movement-item movement__type movement__type--${checkTypeOfTransaction(transactionsArray[i].amount)}">${i + 1} ${checkTypeOfTransaction(transactionsArray[i].amount)}</div>
+            <div class="movement-item movement__type movement__type--${checkTypeOfTransaction(transactionsArray[i].amount)}">${j} ${checkTypeOfTransaction(transactionsArray[i].amount)}</div>
             <div class="movement-item movement__value">${formatMoney(Number(transactionsArray[i].amount))}$</div>
             <div class="movement-item movement-description" >${transactionsArray[i].description}</div>
         </div>
